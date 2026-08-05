@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUTO SHIFT｜多店舗向け自動シフト生成サービス</title>
+<meta name="description" content="スタッフの希望回収からシフトの自動生成、欠員対応までを効率化。スキル・レベルや勤務条件を考慮し、現場が回るシフトを生成する多店舗向けシフト管理サービス「AUTO SHIFT」。1店舗月額20,000円（税抜）、初期費用0円。">
+<meta property="og:title" content="AUTO SHIFT｜多店舗向け自動シフト生成サービス">
+<meta property="og:description" content="人数合わせのシフトから、“戦力で組む”シフトへ。希望回収からシフト作成、欠員対応まで自動化する多店舗向けシフト管理サービス。">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="hd-inner">
+    <a class="hd-logo" href="#top" aria-label="AUTO SHIFT トップ"> <img src="images/logo-mark.png" alt=""> <span>AUTO SHIFT</span> </a>
+    <div class="hd-right">
+      <a class="hd-tel" href="tel:0484238023"> <span class="ico" aria-hidden="true">☎</span> <span> <span class="num" style="display:block">048-423-8023</span> <span class="staff" style="display:block">担当：大西</span> </span> </a> <a class="btn btn-primary hd-cta js-cta" href="#contact-form">無料で15分デモを見る</a>
+    </div>
+  </div>
+</header>
+<main id="top">
+  
+  <!-- 01 ファーストビュー -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-deco-circle c1" aria-hidden="true">
+      </div>
+      <div class="hero-deco-circle c2" aria-hidden="true">
+      </div>
+      <div class="hero-deco-dots" aria-hidden="true">
+      </div>
+      <div class="hero-grid">
+        <div class="fade-up in-view">
+          <span class="badge">多店舗運営向け 自動シフト生成サービス</span>
+          <h1>人数合わせのシフトから、<br>
+            <span class="or">“戦力で組む”</span><br>
+            シフトへ。</h1>
+          <p class="hero-lead">希望回収からシフト作成、欠員対応まで。<br>
+            スキルや勤務条件を考慮して、<br>
+            現場が回るシフトづくりを自動化します。</p>
+          <div class="hero-cta-row">
+            <a class="btn btn-primary js-cta hero-btn" href="#contact-form"> <span class="hero-btn-sub">ーオンラインー</span> <span class="hero-btn-main">無料で15分デモを見る<span class="arrow">›</span></span> </a>
+          </div>
+          <div class="price-chips">
+            <div class="p-chip">
+              <span class="lbl">初期費用</span><span class="val"><em>0</em>円</span>
+            </div>
+            <div class="p-chip strong">
+              <span class="lbl">1店舗あたり</span><span class="val">月額<em>20,000</em>円</span>
+            </div>
+            <div class="p-chip">
+              <span class="lbl">従業員数による</span><span class="val" style="font-size:15px">追加料金なし</span>
+            </div>
+          </div>
+          <p class="hero-note">※月額料金は税抜です。<br>
+            ※LINE通知は1通3円の送信実費が別途かかります。</p>
+        </div>
+        <div class="hero-visual fade-up in-view">
+          <img src="images/hero-pc-phone.png" alt="AUTO SHIFTの管理画面（マンパワー管理）とスタッフ用スマホ画面（シフト希望提出）">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 02 こんなシフト管理になっていませんか -->
+  <section class="pad-l">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">02</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>こんなシフト管理に、<br>
+          時間を取られていませんか？</h2>
+      </div>
+      <div class="pain-grid" style="margin-top:36px">
+        <div class="pain-card fade-up">
+          <img class="ico" src="images/02-01.png" alt="">
+          <h3>希望の回収・催促が大変</h3>
+          <p>スタッフごとに提出状況を確認して、未提出者には個別に連絡。</p>
+        </div>
+        <div class="pain-card fade-up">
+          <img class="ico" src="images/02-02.png" alt="">
+          <h3>条件を考えるほど、<br>
+            シフト作成が複雑に</h3>
+          <p>希望だけでなく、スキルや勤務時間、連勤なども考えながら一人ずつ調整。</p>
+        </div>
+        <div class="pain-card fade-up">
+          <img class="ico" src="images/02-03.png" alt="">
+          <h3>人数は足りているのに、<br>
+            現場が回らない</h3>
+          <p>必要なスキルを持つスタッフが偏り、人数だけでは解決できないことも。</p>
+        </div>
+        <div class="pain-card fade-up">
+          <img class="ico" src="images/02-04.png" alt="">
+          <h3>欠員が出るたびに、<br>
+            スタッフを探す</h3>
+          <p>急な欠員が出るたび、電話やLINEで一人ずつ確認。</p>
+        </div>
+      </div>
+      <p class="pain-sum fade-up">毎月繰り返すシフト管理だからこそ、<br>
+        <span class="accent">もっとシンプルに。</span></p>
+    </div>
+  </section>
+  
+  <!-- 03 AUTO SHIFTなら仕組みに -->
+  <section class="pad-l sec-scheme">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">03</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>AUTO SHIFTなら、<br>
+          シフト管理を“仕組み”に。</h2>
+        <p class="sec-lead">希望を集めるところから、シフト作成、欠員対応まで。<br>
+          これまで管理者が行っていた作業を効率化します。</p>
+      </div>
+      <div class="flow6 fade-up">
+        <div class="flow-step">
+          <span class="tag">STEP 01</span>
+          <h3>希望を提出</h3>
+          <p>スタッフがスマホから勤務希望を提出。</p>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="#1c2a47" stroke-width="2.2"/>
+            <rect x="18" y="3" width="12" height="6" rx="2" fill="#1c2a47"/>
+            <path d="M16 24l5 5 11-11" stroke="#f47a20" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 33h16" stroke="#1c2a47" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flow-arrow-wrap">
+          <div class="arrow-h" aria-hidden="true">
+          </div>
+        </div>
+        <div class="flow-step">
+          <span class="tag">STEP 02</span>
+          <h3>条件を自動判定</h3>
+          <p>希望やスキル、勤務条件などを自動でチェック。</p>
+          <img class="ico" src="images/icon-gear.png" alt="">
+        </div>
+        <div class="flow-arrow-wrap">
+          <div class="arrow-h" aria-hidden="true">
+          </div>
+        </div>
+        <div class="flow-step">
+          <span class="tag">STEP 03</span>
+          <h3>シフトを自動生成</h3>
+          <p>設定した条件をもとに、シフトを自動で生成。</p>
+          <img class="ico" src="images/icon-calendar.png" alt="">
+        </div>
+        <div class="flow-arrow-wrap">
+          <div class="arrow-h" aria-hidden="true">
+          </div>
+        </div>
+        <div class="flow-step">
+          <span class="tag">STEP 04</span>
+          <h3>欠員が発生</h3>
+          <p>必要人数に満たない枠を自動で判定。</p>
+          <img class="ico" src="images/icon-people.png" alt="">
+        </div>
+        <div class="flow-arrow-wrap">
+          <div class="arrow-h" aria-hidden="true">
+          </div>
+        </div>
+        <div class="flow-step">
+          <span class="tag">STEP 05</span>
+          <h3>スタッフへ募集</h3>
+          <p>不足している勤務枠をスタッフへ公開。</p>
+          <img class="ico" src="images/icon-megaphone.png" alt="">
+        </div>
+        <div class="flow-arrow-wrap">
+          <div class="arrow-h" aria-hidden="true">
+          </div>
+        </div>
+        <div class="flow-step">
+          <span class="tag">STEP 06</span>
+          <h3>応募・確定</h3>
+          <p>スタッフが応募すると、そのままシフトに反映。</p>
+          <img class="ico" src="images/icon-handshake.png" alt="">
+        </div>
+      </div>
+      <div class="flow-summary fade-up">
+        <span class="fs-item"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="#1c2a47" stroke-width="2.2"/><rect x="18" y="3" width="12" height="6" rx="2" fill="#1c2a47"/><path d="M16 24l5 5 11-11" stroke="#f47a20" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 33h16" stroke="#1c2a47" stroke-width="2" stroke-linecap="round"/></svg>希望回収</span> <span class="fs-arrow">→</span> <span class="fs-item"><img class="ico" src="images/icon-gear.png" alt="">条件判定</span> <span class="fs-arrow">→</span> <span class="fs-item"><img class="ico" src="images/icon-calendar.png" alt="">自動生成</span> <span class="fs-arrow">→</span> <span class="fs-item"><img class="ico" src="images/icon-people.png" alt="">欠員対応</span> <span class="fs-text">シフト管理の一連の流れを、<span class="accent">AUTO SHIFTひとつで。</span></span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 04 選ばれる3つの理由 -->
+  <section class="pad-l compact sec-reasons">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">04</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>ただ自動で組むだけじゃない。<br>
+          AUTO SHIFTが選ばれる3つの理由</h2>
+      </div>
+      <div class="reason-block fade-up">
+        <div class="r-text">
+          <div class="r-num">
+            REASON 01
+          </div>
+          <h3>スキル × レベルで<br>
+            “回る”配置に</h3>
+          <p>スタッフごとにスキルとレベルを設定。<br>
+            必要なスキル・レベル・人数を考慮して、<br>
+            現場が回る配置をつくります。</p>
+          <span class="r-emph">ただ人数を埋めるだけではありません。</span>
+        </div>
+        <div class="r-visual skill-table">
+          <div class="st-head">
+            <span>スタッフ</span><span>スキル / レベル</span><span>店舗</span>
+          </div>
+          <div class="skill-row">
+            <span class="name"><span class="avatar">高</span>高橋</span> <span class="tag">ホール <span class="stars">★★</span></span> <span class="cnt">店舗A</span>
+          </div>
+          <div class="skill-row">
+            <span class="name"><span class="avatar">鈴</span>鈴木</span> <span class="tag">キッチン <span class="stars">★</span></span> <span class="cnt">店舗A</span>
+          </div>
+          <div class="skill-row">
+            <span class="name"><span class="avatar">田</span>田中</span> <span class="tag">ホール <span class="stars">★★★</span></span> <span class="cnt">店舗B</span>
+          </div>
+          <div class="skill-row">
+            <span class="name"><span class="avatar">佐</span>佐藤</span> <span class="tag">キッチン <span class="stars">★★</span></span> <span class="cnt">店舗B</span>
+          </div>
+        </div>
+      </div>
+      <div class="reason-block rev fade-up">
+        <div class="r-text">
+          <div class="r-num">
+            REASON 02
+          </div>
+          <h3>締切後は毎日、<br>
+            全自動で生成</h3>
+          <p>スタッフの希望や公平性、<br>
+            連勤・労働時間の上限などを考慮して、<br>
+            シフトを自動で生成します。</p>
+          <p style="margin-top:10px">希望の変更などがあった場合も、<br>
+            条件をもとに毎日再計算します。</p>
+          <span class="r-emph">条件を確認しながら組む作業を、自動化。</span>
+        </div>
+        <div class="r-visual r-visual-auto">
+          <img src="images/reason-generate.png" alt="AUTO SHIFTのマンパワー管理画面。日ごとに自動生成されたシフトが表示されている">
+        </div>
+      </div>
+      <div class="reason-block fade-up">
+        <div class="r-text">
+          <div class="r-num">
+            REASON 03
+          </div>
+          <h3>欠員は“仕組み”で補充</h3>
+          <p>不足している勤務枠をスタッフへ公開。<br>
+            応募があれば、そのままシフトに反映されます。</p>
+          <p style="margin-top:10px">店舗間のヘルプにも対応し、<br>
+            複数店舗で人員を調整できます。</p>
+          <span class="r-emph">一人ずつ電話やLINEで探す手間を削減。</span>
+        </div>
+        <div class="r-visual crop-top no-frame" style="aspect-ratio:4/3">
+          <img src="images/reason-shortage.png" alt="不足枠の募集管理画面と、スタッフがヘルプに応募する画面">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 主な機能 -->
+  <section class="pad-l sec-func">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">05</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>シフト管理に必要な機能を、<br>
+          ひとつに。</h2>
+        <p class="sec-lead">管理者のシフト作成から、<br>
+          スタッフの希望提出・確認まで。<br>
+          毎日のシフト管理をシンプルにします。</p>
+      </div>
+      <div class="func-layout fade-up">
+        <div class="func-col">
+          <div class="func-item">
+            <img class="ico" src="images/icon-calendar.png" alt="">
+            <div>
+              <h3>シフト希望を自動回収</h3>
+              <p>スタッフはスマホから簡単に希望を提出。提出内容を自動で回収し、未提出者へのリマインドも自動で行います。</p>
+            </div>
+          </div>
+          <div class="func-item">
+            <img class="ico" src="images/icon-preview.png" alt="">
+            <div>
+              <h3>提出状況をひと目で確認</h3>
+              <p>誰が提出済みで、誰が未提出なのかを一覧表示。確認漏れを防ぎます。</p>
+            </div>
+          </div>
+          <div class="func-item">
+            <img class="ico" src="images/icon-gear.png" alt="">
+            <div>
+              <h3>充足状況を事前にチェック</h3>
+              <p>必要人数に対して人員が足りるかをシフト生成前に確認できます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="func-center">
+          <img src="images/hero-pc-phone.png" alt="AUTO SHIFTの管理画面とスタッフ用スマホ画面">
+        </div>
+        <div class="func-col">
+          <div class="func-item">
+            <img class="ico" src="images/icon-handshake.png" alt="">
+            <div>
+              <h3>店舗間でヘルプを募集</h3>
+              <p>不足している勤務枠を他店舗へ公開。店舗をまたいだ人員調整をスムーズにします。</p>
+            </div>
+          </div>
+          <div class="func-item">
+            <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M8 40l2-9 21-21 7 7-21 21-9 2z" fill="none" stroke="#1c2a47" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M29 12l7 7" stroke="#f47a20" stroke-width="2.2"/>
+            </svg>
+            <div>
+              <h3>シフト訂正依頼もシステム上で</h3>
+              <p>スタッフからシフトの訂正を申請。管理者は内容を確認して対応できます。</p>
+            </div>
+          </div>
+          <div class="func-item">
+            <img class="ico" src="images/icon-megaphone.png" alt="">
+            <div>
+              <h3>LINE・メールで自動通知</h3>
+              <p>受付開始・締切・確定などをLINEに自動送信。LINE未連携でもメールで受け取れます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 06 他のシフト管理ツールとの違い -->
+  <section class="pad-l sec-compare">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">06</span>
+      </div>
+      <div class="compare-layout">
+      <div class="compare-top">
+        <div class="fade-up">
+          <div class="sec-head" style="margin-bottom:14px">
+            <h2>シフト管理ツールなら、<br>
+              どれも同じ？</h2>
+          </div>
+          <h3>AUTO SHIFTは、<br>
+            “管理する”だけでなく、<br>
+            “現場が回るシフトを組む”ところまで。</h3>
+        </div>
+        <p class="sec-lead fade-up" style="margin-top:6px">希望回収やシフト共有だけでなく、<br>
+          スキルや勤務条件を考慮した自動生成から<br>
+          欠員対応までをサポートします。</p>
+      </div>
+      <div class="compare-table-wrap fade-up">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th class="col-item">比較項目</th>
+              <th class="col-as">AUTO SHIFT</th>
+              <th>一般的な<br>
+                シフト管理ツール</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-item">スキル（担当業務）の設定</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk mid">○</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk mid">○</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">スキルレベルまで設定</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">条件を考慮したシフト自動生成</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">締切後の自動生成・再計算</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">希望を考慮した公平な配置</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">不足枠へのスタッフ応募</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">応募後のシフト反映</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">店舗間ヘルプ</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk great">◎</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk low">△</span></td>
+            </tr>
+            <tr>
+              <td class="col-item">LINE・メール通知</td>
+              <td class="col-as" data-label="AUTO SHIFT"><span class="mk mid">○</span></td>
+              <td data-label="一般的なシフト管理ツール"><span class="mk mid">○</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <p class="compare-note fade-up">※一般的なシフト管理サービスとの機能傾向を比較したものです。<br>
+        各サービスの仕様・プランによって利用できる機能は異なります。</p>
+    </div>
+  </section>
+  
+  <!-- 07 管理者にも、スタッフにも使いやすく -->
+  <section class="pad-l sec-pair">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">07</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>管理者だけじゃない。<br>
+          スタッフにも使いやすく。</h2>
+      </div>
+      <div class="pair-grid fade-up">
+        <div class="pair-card">
+          <span class="pair-label">管理者</span>
+          <h3>管理する人の負担を軽く</h3>
+          <ul>
+            <li>希望提出状況を一覧で確認</li>
+            <li>未提出者へのリマインドを自動化</li>
+            <li>条件を考慮してシフトを自動生成</li>
+            <li>不足枠の募集もシステム上で完結</li>
+          </ul>
+          <div class="pair-visual">
+            <img src="images/admin-screen.png" alt="AUTO SHIFTの管理画面（マンパワー管理・希望一覧）">
+          </div>
+        </div>
+        <div class="pair-card">
+          <span class="pair-label staff">スタッフ</span>
+          <h3>いつものスマホでかんたん操作</h3>
+          <ul>
+            <li>スマホから希望を提出</li>
+            <li>確定したシフトをいつでも確認</li>
+            <li>シフトの訂正依頼もオンラインで</li>
+            <li>受付開始や確定をLINEでお知らせ</li>
+          </ul>
+          <div class="staff-visual-row">
+            <div class="pair-visual">
+              <img src="images/staff-screen.png" alt="スタッフ用スマホ画面（シフト確認）">
+            </div>
+            <div class="line-note">
+              <span class="dot" aria-hidden="true"><i class="bi bi-line"></i></span> <span>【AUTO SHIFT】<br>
+                確定したシフトを<br>
+                お知らせします。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="pair-foot fade-up"><i class="bi bi-phone" aria-hidden="true"></i> <span>専用アプリのインストールは不要。<br>
+        LINE未連携の場合はメールで通知を受け取れます。</span> <i class="bi bi-envelope" aria-hidden="true"></i></p>
+    </div>
+  </section>
+  
+  <!-- 08 導入すると、シフト管理がこう変わる -->
+  <section class="pad-l sec-ba">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">08</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>導入すると、<br>
+          シフト管理がこう変わる</h2>
+      </div>
+      <div class="ba-grid fade-up">
+        <div class="ba-col">
+          <div class="ba-head before">
+            BEFORE　これまで
+          </div>
+          <div class="ba-body ba-body-icons">
+            <div class="ba-icon-step">
+              <img src="images/08-01.png" alt="">
+              <span>希望を<br>集める</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-02.png" alt="">
+              <span>未提出者へ<br>催促</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-03.png" alt="">
+              <span>条件を<br>確認</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-04.png" alt="">
+              <span>シフトを<br>作成</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-05.png" alt="">
+              <span>欠員が出たら<br>スタッフを探す</span>
+            </div>
+          </div>
+        </div>
+        <div class="ba-arrow-col">
+          <div class="arrow-h" style="width:44px;height:34px" aria-hidden="true">
+          </div>
+        </div>
+        <div class="ba-col">
+          <div class="ba-head after">
+            AUTO SHIFTなら
+          </div>
+          <div class="ba-body ba-body-icons">
+            <div class="ba-icon-step">
+              <img src="images/08-06.png" alt="">
+              <span>希望を<br>自動回収</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-07.png" alt="">
+              <span>条件を<br>自動判定</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-08.png" alt="">
+              <span>シフトを<br>自動生成</span>
+            </div>
+            <div class="ba-icon-arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="ba-icon-step">
+              <img src="images/08-09.png" alt="">
+              <span>不足枠を<br>スタッフへ募集</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ba-bottom fade-up">
+        <div class="ba-bottom-text">
+          <h3>管理者は、必要な部分だけ対応。</h3>
+          <p>シフト管理にかかっていた時間を、店舗運営やスタッフとのコミュニケーションなど、<br>
+            <span class="accent" style="font-weight:900">本来の業務に活用できます。</span></p>
+        </div>
+        <div class="ba-illust" aria-hidden="true">
+          <img src="images/08-10.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 09 料金 -->
+  <section class="pad-l sec-price">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">09</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>料金は、<br>
+          シンプルな店舗定額。</h2>
+        <p class="sec-lead">従業員数にかかわらず、<br>
+          1店舗ごとのわかりやすい料金です。</p>
+      </div>
+      <div class="price-panel fade-up">
+        <div class="price-main-card">
+          <div class="price-ribbon">わかりやすい店舗定額制</div>
+          <div class="lbl">
+            1店舗あたり
+          </div>
+          <div class="price-big">
+            <span class="yen">月額</span>20,000<span class="unit">円</span><span class="tax">（税抜）</span>
+          </div>
+          <div class="price-benefits">
+            <div class="benefit">
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <span class="benefit-text">初期費用　<b>0円</b></span>
+            </div>
+            <span class="benefit-divider" aria-hidden="true"></span>
+            <div class="benefit">
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <span class="benefit-text">従業員数による<br>
+                <b>追加料金なし</b></span>
+            </div>
+          </div>
+          <div class="price-line">
+            <div class="price-line-main">
+              <span class="price-line-tag">LINE</span>
+              <div class="price-line-text">
+                <div class="price-line-label">LINE通知をご利用の場合</div>
+                <div class="price-line-value">送信料｜1通あたり <b>3円</b>（税抜）</div>
+              </div>
+            </div>
+            <p class="price-line-note">※実際に送信した分のみ発生します。</p>
+          </div>
+        </div>
+        <div class="price-side">
+          <div class="price-cta-card">
+            <div class="price-cta-visual">
+              <img src="images/hero-pc-phone.png" alt="AUTO SHIFTの管理画面イメージ">
+            </div>
+            <p class="cta-note">実際の画面を見ながら<br>
+              ご説明します。</p>
+            <a class="btn btn-primary js-cta" href="#contact-form">無料で15分デモを見る</a>
+          </div>
+        </div>
+      </div>
+      <p class="price-body fade-up">希望回収からシフトの自動生成、欠員対応まで。<br>
+        日々のシフト管理を支える機能を、まとめてご利用いただけます。</p>
+    </div>
+  </section>
+  
+  <!-- 10 中間CTA -->
+  <section class="mid-cta" id="contact-form">
+    <div class="wrap">
+      <div class="mid-inner fade-up">
+        <div class="mid-visual">
+          <img src="images/hero-pc-phone.png" alt="">
+        </div>
+        <div class="mid-text">
+          <h3>自社のシフトでも使えそう？<br>
+            まずは実際の画面をご覧ください。</h3>
+          <p>AUTO SHIFTの操作画面を見ながら、機能や使い方をご紹介します。<br>
+            オンラインで約15分。導入についてのご質問もお気軽にご相談ください。</p>
+        </div>
+        <div class="mid-actions">
+          <a class="btn btn-tel" href="tel:0484238023"><b>048-423-8023</b>　担当：大西</a> <a class="btn btn-primary js-cta" href="#contact-form">無料で15分デモを見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 導入までの流れ -->
+  <section class="pad-l">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">11</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>導入までの流れ</h2>
+        <p class="sec-lead">ご相談から運用開始まで、<br>
+          導入をサポートします。</p>
+      </div>
+      <div class="steps5 fade-up">
+        <div class="step5-item">
+          <span class="n">STEP 01</span>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="5" y="11" width="38" height="26" rx="4" fill="none" stroke="#1c2a47" stroke-width="2.2"/>
+            <path d="M5 13l19 14 19-14" fill="none" stroke="#f47a20" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>お問い合わせ</h3>
+          <p>まずは無料デモをご予約ください。</p>
+        </div>
+        <div class="step5-arrow">
+          <div class="arrow-sm" aria-hidden="true">
+          </div>
+        </div>
+        <div class="step5-item">
+          <span class="n">STEP 02</span>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="6" y="8" width="30" height="20" rx="2" fill="none" stroke="#1c2a47" stroke-width="2.2"/>
+            <path d="M16 34h10" stroke="#1c2a47" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M21 28v6" stroke="#1c2a47" stroke-width="2.2"/>
+            <circle cx="38" cy="30" r="5" fill="none" stroke="#f47a20" stroke-width="2.2"/>
+            <path d="M31 42c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#f47a20" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <h3>オンラインデモ</h3>
+          <p>実際の画面を見ながら、機能や使い方をご説明します。</p>
+        </div>
+        <div class="step5-arrow">
+          <div class="arrow-sm" aria-hidden="true">
+          </div>
+        </div>
+        <div class="step5-item">
+          <span class="n">STEP 03</span> <img class="ico" src="images/icon-gear.png" alt="">
+          <h3>初期設定</h3>
+          <p>店舗情報やシフト条件など、運用に必要な設定を行います。</p>
+        </div>
+        <div class="step5-arrow">
+          <div class="arrow-sm" aria-hidden="true">
+          </div>
+        </div>
+        <div class="step5-item">
+          <span class="n">STEP 04</span> <img class="ico" src="images/icon-people.png" alt="">
+          <h3>スタッフ登録</h3>
+          <p>スタッフをAUTO SHIFTへ登録します。</p>
+        </div>
+        <div class="step5-arrow">
+          <div class="arrow-sm" aria-hidden="true">
+          </div>
+        </div>
+        <div class="step5-item">
+          <span class="n">STEP 05</span> <img class="ico" src="images/icon-calendar.png" alt="">
+          <h3>運用スタート</h3>
+          <p>希望回収からシフト作成まで、AUTO SHIFTでの運用を開始します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 12 FAQ -->
+  <section class="pad-l sec-faq">
+    <div class="wrap">
+      <div class="eyebrow fade-up">
+        <span class="num">12</span>
+      </div>
+      <div class="sec-head fade-up">
+        <h2>よくあるご質問</h2>
+      </div>
+      <p class="faq-hint fade-up">※その他のご質問は、お気軽にお問い合わせください。</p>
+      <div class="faq-grid fade-up">
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>従業員が増えても料金は変わりませんか？</summary>
+          <div class="a">
+            変わりません。1店舗あたり月額20,000円（税抜）の定額です。従業員数による追加料金はありません。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>月額料金以外に費用はかかりますか？</summary>
+          <div class="a">
+            LINE通知の送信実費として、1通3円が別途かかります。初期費用はかかりません。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>LINEを使っていないスタッフがいても大丈夫ですか？</summary>
+          <div class="a">
+            はい。LINE未連携のスタッフにはメールで通知されるため、LINEを利用していないスタッフもご利用いただけます。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>スタッフはスマホだけで利用できますか？</summary>
+          <div class="a">
+            はい。希望提出・シフト確認・訂正依頼など、スタッフの操作はスマホで行えます。専用アプリのインストールも不要です。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>複数店舗でも利用できますか？</summary>
+          <div class="a">
+            はい。店舗間でのヘルプ募集にも対応しているため、複数店舗でのシフト管理にもご活用いただけます。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="qm">Q.</span>導入時の設定が不安です。</summary>
+          <div class="a">
+            初期設定は担当者がサポートします。導入についてご不明な点も、お気軽にご相談ください。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 13 最終CTA -->
+  <section class="pad-l final-cta">
+    <div class="wrap">
+      <div class="final-grid fade-up">
+        <div class="final-copy">
+          <span class="cta-tag">オンライン約15分</span>
+          <h2>まずは15分、<br>
+            画面をご覧ください。</h2>
+          <p>「自社のシフト運用に合うか知りたい」<br>
+            「実際の操作を見てみたい」<br>
+            <br>
+            そんな段階でも大丈夫です。<br>
+            <br>
+            実際の画面を見ながら、<br>
+            AUTO SHIFTの機能や使い方をご紹介します。</p>
+        </div>
+        <div class="final-visual">
+          <img src="images/hero-pc-phone.png" alt="AUTO SHIFTの管理画面とスタッフ用スマホ画面">
+        </div>
+        <div class="final-col-side">
+          <div class="final-actions">
+            <a class="btn btn-primary js-cta" href="#contact-form">無料で15分デモを見る</a> <span class="cta-note">オンライン約15分</span> <a class="btn btn-tel" href="tel:0484238023"><b>048-423-8023</b>　担当：大西</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="footer-logo" href="#top"> <img src="images/logo-mark.png" alt=""> <span>AUTO SHIFT</span> </a>
+    <nav class="footer-nav" aria-label="サイトリンク"> <a href="../HP/index.html">トップ</a> <a href="../HP/features.html">特長・機能</a> <a href="../HP/price.html">料金</a> <a href="../HP/company.html">会社概要</a> </nav>
+    <p class="footer-copy">© 2026 株式会社ガーデン</p>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
