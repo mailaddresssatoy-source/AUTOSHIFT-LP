@@ -326,8 +326,8 @@ section {
 }
 .badge::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--orange);
   flex: none
@@ -399,6 +399,10 @@ section {
   padding: 10px 8px;
   text-align: center;
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
 }
 .p-chip .lbl {
   font-size: 11.5px;
@@ -489,6 +493,19 @@ section {
 .pain-sum {
   text-align: center;
   margin-top: 52px;
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.7
+}
+.pain-scheme-card {
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  margin-top: 28px;
+  padding: clamp(24px, 3.5vw, 36px);
+  text-align: center;
+}
+.pain-scheme-card p {
   font-size: clamp(18px, 2.4vw, 24px);
   font-weight: 900;
   color: var(--navy);
@@ -1096,7 +1113,17 @@ table.compare tbody tr:last-child td {
 }
 .ba-head.after {
   background: var(--orange);
-  color: #fff
+  color: #fff;
+  flex-wrap: wrap
+}
+.ba-after-label {
+  font-size: 13px;
+  font-weight: 700;
+  opacity: .92
+}
+.ba-after-title {
+  font-size: 18px;
+  font-weight: 900
 }
 .ba-body {
   padding: 24px 22px
@@ -1130,8 +1157,8 @@ table.compare tbody tr:last-child td {
   min-width: 0
 }
 .ba-icon-step img {
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 8px
 }
 .ba-icon-step span {
@@ -1139,6 +1166,22 @@ table.compare tbody tr:last-child td {
   color: var(--navy);
   font-weight: 700;
   line-height: 1.5
+}
+.ba-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 900;
+  font-style: normal;
+  margin-right: 4px;
+  vertical-align: middle;
+  flex: none
 }
 .ba-icon-arrow {
   flex: none;
@@ -1154,6 +1197,49 @@ table.compare tbody tr:last-child td {
 }
 .ba-head.after ~ .ba-body .ba-step {
   color: var(--navy)
+}
+.ba-auto-step .ba-auto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(244, 122, 32, .25)
+}
+.ba-auto-step .ba-step-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--orange-dark);
+  line-height: 1.4;
+  margin-top: 2px
+}
+.ba-auto-step .ba-step-desc {
+  display: block;
+  font-size: 10.5px;
+  color: var(--gray);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 2px
+}
+.ba-col.ba-auto .ba-body-icons {
+  gap: 4px;
+  align-items: flex-start
+}
+.ba-col.ba-auto .ba-icon-step img,
+.ba-col.ba-auto .ba-auto-icon {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 6px
+}
+.ba-col.ba-auto .ba-icon-arrow {
+  font-size: 26px;
+  margin-top: 50px
 }
 .ba-arrow-col {
   display: flex;
@@ -1207,7 +1293,7 @@ table.compare tbody tr:last-child td {
 .price-main-card {
   background: #fff;
   border-radius: var(--radius-lg);
-  padding: clamp(28px, 4vw, 44px);
+  padding: clamp(22px, 2.8vw, 32px);
   text-align: center;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border);
@@ -1220,13 +1306,13 @@ table.compare tbody tr:last-child td {
   font-size: 13px;
   padding: 8px 22px;
   border-radius: 999px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .price-main-card .lbl {
   font-size: 14px;
   font-weight: 700;
   color: var(--gray);
-  margin-bottom: 8px
+  margin-bottom: 4px
 }
 .price-big {
   font-size: clamp(40px, 7vw, 68px);
@@ -1255,8 +1341,8 @@ table.compare tbody tr:last-child td {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 26px;
-  padding-top: 26px;
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid var(--border);
 }
 .benefit {
@@ -1299,10 +1385,10 @@ table.compare tbody tr:last-child td {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 14px;
   background: #eef7f0;
   border-radius: var(--radius-md);
-  padding: 16px 20px;
+  padding: 12px 20px;
 }
 .price-line-main {
   display: flex;
@@ -1371,11 +1457,11 @@ table.compare tbody tr:last-child td {
 .price-cta-card .btn-primary {
   width: 100%
 }
-.price-body {
-  max-width: 680px;
-  margin: 24px auto 0;
-  text-align: center;
-  font-size: 14.5px;
+.sec-head .price-body {
+  max-width: none;
+  margin: 14px 0 0;
+  text-align: left;
+  font-size: 15px;
   color: var(--gray);
   line-height: 1.9
 }
@@ -1383,26 +1469,87 @@ table.compare tbody tr:last-child td {
 .mid-cta {
   background: linear-gradient(120deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: #fff;
-  padding-block: 40px
+  padding-block: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.mid-cta::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  right: -140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .16), rgba(255, 255, 255, .02) 70%);
+  pointer-events: none;
+}
+.mid-cta::after {
+  content: "";
+  position: absolute;
+  top: 14%;
+  left: 4%;
+  width: 150px;
+  height: 110px;
+  background-image: radial-gradient(#fff 1.6px, transparent 1.6px);
+  background-size: 16px 16px;
+  opacity: .18;
+  pointer-events: none;
 }
 .mid-inner {
   display: flex;
   align-items: center;
   gap: 36px;
   justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.mid-inner::before,
+.mid-inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-image: radial-gradient(#fff 1.6px, transparent 1.6px);
+  background-size: 16px 16px;
+  opacity: .16;
+  pointer-events: none;
+}
+.mid-inner::before {
+  width: 120px;
+  height: 70px;
+  bottom: -22px;
+  left: 34%;
+}
+.mid-inner::after {
+  width: 110px;
+  height: 90px;
+  bottom: -16px;
+  right: 6%;
 }
 .mid-visual {
   flex: none;
   width: 180px;
-  filter: saturate(0) brightness(1.9) contrast(.9);
-  opacity: .85;
+  opacity: 1;
   border-radius: 12px;
   overflow: hidden
 }
 .mid-text {
   flex: 1;
-  min-width: 260px
+  min-width: 300px;
+  position: relative;
+}
+.mid-text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  bottom: -150px;
+  left: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .14), rgba(255, 255, 255, .02) 70%);
+  pointer-events: none;
 }
 .mid-text h3 {
   font-size: clamp(19px, 2.6vw, 25px);
@@ -1562,31 +1709,32 @@ table.compare tbody tr:last-child td {
 /* ---------- 16. 最終CTA ---------- */
 .final-cta {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
-  color: #fff
+  color: #fff;
+  padding-block: clamp(40px, 5.5vw, 76px)
 }
 .final-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 24px;
   align-items: center
 }
 .final-copy .cta-tag {
   color: var(--orange);
   font-weight: 900;
   font-size: 13px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   display: block
 }
 .final-copy h2 {
   font-size: clamp(26px, 3.6vw, 38px);
   font-weight: 900;
-  line-height: 1.5;
-  margin-bottom: 20px
+  line-height: 1.4;
+  margin-bottom: 14px
 }
 .final-copy p {
   font-size: 14.5px;
   color: #c7cee0;
-  line-height: 2
+  line-height: 1.8
 }
 .final-visual {
   position: relative
@@ -1598,13 +1746,13 @@ table.compare tbody tr:last-child td {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   margin-top: 0
 }
 .final-actions .btn-primary {
   width: 100%;
   font-size: 17px;
-  padding: 20px 20px
+  padding: 16px 20px
 }
 .final-actions .cta-note {
   color: #c7cee0
@@ -1622,7 +1770,7 @@ table.compare tbody tr:last-child td {
 .final-col-side {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   justify-content: center
 }
 /* ---------- 17. フッター ---------- */
@@ -1763,11 +1911,45 @@ table.compare tbody tr:last-child td {
     grid-template-columns: 1fr
   }
   .final-grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    gap: 18px
   }
   .final-visual {
-    max-width: 460px;
+    max-width: 320px;
     margin: 0 auto
+  }
+}
+@media(min-width:681px) and (max-width:1024px) {
+  .hero {
+    padding-block: clamp(24px, 3vw, 38px) clamp(28px, 3.5vw, 44px)
+  }
+  .hero-grid {
+    position: relative;
+    min-height: 460px
+  }
+  .hero-visual {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 0
+  }
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: .8;
+    transform: none
+  }
+  .hero-grid > .fade-up:not(.hero-visual) {
+    padding: 30px 28px;
+    margin: 28px
   }
 }
 @media(max-width:680px) {
@@ -1834,11 +2016,19 @@ table.compare tbody tr:last-child td {
   }
   .flow-summary {
     flex-direction: column;
+    border-radius: var(--radius-lg);
     padding: 20px
   }
   .flow-summary .fs-text {
     margin-left: 0;
     margin-top: 6px
+  }
+  .pair-foot {
+    gap: 10px;
+    padding: 16px 14px
+  }
+  .pair-foot i {
+    font-size: 24px
   }
   .func-col {
     flex-direction: column
