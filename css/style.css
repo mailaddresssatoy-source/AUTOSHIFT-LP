@@ -2243,3 +2243,215 @@ table.compare tbody tr:last-child td {
     max-width: 128px
   }
 }
+
+/* ==================================================
+   contact.html
+   ================================================== */
+/* ---- 02 Hero(イントロ) ---- */
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(56px, 6vw, 72px) 0 clamp(40px, 5vw, 56px);
+  background: var(--white);
+}
+.contact-hero-deco-circle {
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(244, 122, 32, .14), rgba(244, 122, 32, .02) 70%);
+  pointer-events: none;
+}
+.contact-hero-deco-dots {
+  position: absolute;
+  bottom: 6%;
+  left: 3%;
+  width: 130px;
+  height: 96px;
+  pointer-events: none;
+  background-image: radial-gradient(var(--navy) 1.6px, transparent 1.6px);
+  background-size: 16px 16px;
+  opacity: .22;
+}
+.contact-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.contact-title {
+  color: var(--navy);
+  font-weight: 900;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.4;
+}
+.contact-title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: var(--orange);
+}
+.contact-lead {
+  margin-top: 18px;
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.contact-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+.contact-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.contact-point-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+.contact-visual img {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: block;
+}
+/* ---- 03 Googleフォーム ---- */
+.contact-form-section {
+  padding: clamp(32px, 4vw, 48px) 0 clamp(56px, 7vw, 88px);
+  background: var(--bg-soft);
+}
+.contact-form-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(28, 42, 71, .08);
+  overflow: hidden;
+}
+.contact-form-frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 1850px;
+  border: 0;
+}
+.contact-form-note {
+  max-width: 800px;
+  margin: 18px auto 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--gray);
+}
+/* ---- 04 電話問い合わせ案内 ---- */
+.contact-support {
+  max-width: 800px;
+  margin: 32px auto 0;
+}
+.contact-support-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 22px 28px;
+}
+.contact-support-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 22px;
+}
+.contact-support-text {
+  flex: 1;
+}
+.contact-support-label {
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+.contact-support-tel {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--navy);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+.contact-support-staff {
+  margin-top: 2px;
+  color: var(--subtext);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.contact-back-link {
+  margin-top: 28px;
+  text-align: center;
+}
+.contact-back-link a {
+  color: var(--gray);
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: color .15s ease;
+}
+.contact-back-link a:hover {
+  color: var(--orange-dark);
+}
+@media (max-width: 1024px) {
+  .contact-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .contact-visual {
+    order: 2;
+  }
+  .contact-visual img {
+    max-width: 360px;
+  }
+}
+@media (max-width: 680px) {
+  .contact-hero {
+    padding: clamp(40px, 10vw, 48px) 0 clamp(28px, 6vw, 36px);
+  }
+  .contact-form-section {
+    padding: 28px 0 56px;
+  }
+  .contact-form-frame {
+    height: 2080px;
+  }
+  .contact-support-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+}
