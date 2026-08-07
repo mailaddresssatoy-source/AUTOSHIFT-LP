@@ -9,14 +9,15 @@
   --orange: #f47a20;
   --orange-dark: #d96513;
   --orange-light: #fff2e8;
-  --orange-soft: #fdece0;
   --navy: #1c2a47;
   --navy2: #111a33;
+  --navy-light: #e7edf7;
+  --navy-mist: #eef3fa;
   --text: #1f2937;
   --gray: #5b6472;
   --subtext: #6b7280;
   --white: #ffffff;
-  --bg-soft: #f7f8fa;
+  --bg-soft: #f4f7fb;
   --border: #e5e9f0;
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -259,20 +260,29 @@ section {
 }
 /* ---------- 4. FV ---------- */
 .hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(48px, 6vw, 76px) clamp(56px, 7vw, 88px);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url('../images/LP-FV-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  padding-block: clamp(48px, 6vw, 76px) clamp(56px, 7vw, 88px);
+  filter: hue-rotate(195deg) saturate(.55) brightness(1.05);
+  z-index: 0;
 }
 .hero-inner {
-  position: relative
+  position: relative;
+  z-index: 1;
 }
 .hero-deco-circle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(244, 122, 32, .16), rgba(244, 122, 32, .03) 70%);
+  background: radial-gradient(circle at 30% 30%, rgba(28, 42, 71, .13), rgba(28, 42, 71, .02) 70%);
   pointer-events: none;
 }
 .hero-deco-circle.c1 {
@@ -285,7 +295,8 @@ section {
   width: 340px;
   height: 340px;
   bottom: -160px;
-  right: 12%
+  right: 12%;
+  background: radial-gradient(circle at 30% 30%, rgba(58, 91, 153, .16), rgba(58, 91, 153, .02) 70%);
 }
 .hero-deco-dots {
   position: absolute;
@@ -294,9 +305,9 @@ section {
   width: 150px;
   height: 110px;
   pointer-events: none;
-  background-image: radial-gradient(var(--orange) 1.6px, transparent 1.6px);
+  background-image: radial-gradient(var(--navy) 1.6px, transparent 1.6px);
   background-size: 16px 16px;
-  opacity: .35;
+  opacity: .3;
 }
 .hero-grid {
   display: grid;
@@ -314,9 +325,9 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--orange-light);
-  color: var(--orange-dark);
-  border: 1.5px solid rgba(244, 122, 32, .3);
+  background: var(--navy-light);
+  color: var(--navy);
+  border: 1.5px solid rgba(28, 42, 71, .18);
   border-radius: 999px;
   padding: 6px 16px;
   font-size: 12.5px;
@@ -329,7 +340,7 @@ section {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--navy);
   flex: none
 }
 .hero h1 {
@@ -513,7 +524,7 @@ section {
 }
 /* ---------- 6. 仕組み(6STEP) ---------- */
 .sec-scheme {
-  background: var(--orange-soft)
+  background: var(--navy-mist)
 }
 .flow6 {
   display: grid;
@@ -641,7 +652,7 @@ section {
 .r-num {
   font-size: 15px;
   font-weight: 900;
-  color: var(--orange);
+  color: var(--navy);
   letter-spacing: 2px;
   margin-bottom: 10px
 }
@@ -864,16 +875,13 @@ table.compare {
   min-width: 480px;
   white-space: nowrap
 }
-table.compare th.col-item,
-table.compare td.col-item {
+table.compare th.col-item, table.compare td.col-item {
   width: 50%
 }
-table.compare th.col-as,
-table.compare td.col-as {
+table.compare th.col-as, table.compare td.col-as {
   width: 25%
 }
-table.compare th:last-child,
-table.compare td:last-child {
+table.compare th:last-child, table.compare td:last-child {
   width: 25%
 }
 table.compare thead th {
@@ -954,7 +962,7 @@ table.compare tbody tr:last-child td {
 }
 .pair-label {
   display: inline-block;
-  background: var(--navy);
+  background: var(--orange);
   color: #fff;
   font-size: 12px;
   font-weight: 900;
@@ -1065,17 +1073,18 @@ table.compare tbody tr:last-child td {
   gap: 16px;
   text-align: center;
   margin-top: 32px;
-  background: var(--orange-light);
+  background: var(--navy-light);
   border-radius: var(--radius-md);
   padding: 18px 24px;
   font-size: 14px;
+  font-weight: 700;
   color: var(--gray);
   line-height: 1.8;
 }
 .pair-foot i {
   flex: none;
   font-size: 32px;
-  color: var(--orange)
+  color: var(--navy)
 }
 /* ---------- 11. Before/After ---------- */
 .sec-ba {
@@ -1112,7 +1121,7 @@ table.compare tbody tr:last-child td {
   color: var(--gray)
 }
 .ba-head.after {
-  background: var(--orange);
+  background: var(--navy);
   color: #fff;
   flex-wrap: wrap
 }
@@ -1157,8 +1166,10 @@ table.compare tbody tr:last-child td {
   min-width: 0
 }
 .ba-icon-step img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin-bottom: 8px
 }
 .ba-icon-step span {
@@ -1231,10 +1242,11 @@ table.compare tbody tr:last-child td {
   gap: 4px;
   align-items: flex-start
 }
-.ba-col.ba-auto .ba-icon-step img,
-.ba-col.ba-auto .ba-auto-icon {
-  width: 92px;
-  height: 92px;
+.ba-col.ba-auto .ba-icon-step img, .ba-col.ba-auto .ba-auto-icon {
+  width: 100%;
+  max-width: 92px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin-bottom: 6px
 }
 .ba-col.ba-auto .ba-icon-arrow {
@@ -1281,7 +1293,7 @@ table.compare tbody tr:last-child td {
 }
 /* ---------- 12. 料金 ---------- */
 .sec-price {
-  background: var(--orange-soft)
+  background: var(--navy-mist)
 }
 .price-panel {
   display: grid;
@@ -1467,7 +1479,7 @@ table.compare tbody tr:last-child td {
 }
 /* ---------- 13. 中間CTA ---------- */
 .mid-cta {
-  background: linear-gradient(120deg, var(--orange) 0%, var(--orange-dark) 100%);
+  background: linear-gradient(120deg, var(--navy) 0%, var(--navy2) 100%);
   color: #fff;
   padding-block: 40px;
   position: relative;
@@ -1505,8 +1517,7 @@ table.compare tbody tr:last-child td {
   position: relative;
   z-index: 1;
 }
-.mid-inner::before,
-.mid-inner::after {
+.mid-inner::before, .mid-inner::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1577,19 +1588,6 @@ table.compare tbody tr:last-child td {
 }
 .mid-actions .btn-tel b {
   color: #fff
-}
-.mid-actions .btn-primary {
-  background: #fff;
-  color: var(--orange-dark);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, .16)
-}
-.mid-actions .btn-primary::after {
-  color: var(--orange-dark)
-}
-.mid-actions .btn-primary:hover {
-  background: #fff;
-  color: var(--orange-dark);
-  transform: translateY(-2px)
 }
 /* ---------- 14. 導入の流れ ---------- */
 .steps5 {
@@ -1708,7 +1706,7 @@ table.compare tbody tr:last-child td {
 }
 /* ---------- 16. 最終CTA ---------- */
 .final-cta {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
+  background: linear-gradient(160deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: #fff;
   padding-block: clamp(40px, 5.5vw, 76px)
 }
@@ -1731,9 +1729,26 @@ table.compare tbody tr:last-child td {
   line-height: 1.4;
   margin-bottom: 14px
 }
+.final-heading-line {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.final-heading-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.08em;
+  width: 100%;
+  height: 0.5em;
+  background: #1c2a47;
+  border-radius: 0;
+  z-index: -1;
+}
 .final-copy p {
   font-size: 14.5px;
-  color: #c7cee0;
+  font-weight: 600;
+  color: #fff;
   line-height: 1.8
 }
 .final-visual {
@@ -1752,7 +1767,16 @@ table.compare tbody tr:last-child td {
 .final-actions .btn-primary {
   width: 100%;
   font-size: 17px;
-  padding: 16px 20px
+  padding: 16px 20px;
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 10px 24px rgba(28, 42, 71, .18);
+  transition: transform .2s ease, box-shadow .2s ease
+}
+.final-actions .btn-primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(28, 42, 71, .24)
 }
 .final-actions .cta-note {
   color: #c7cee0
@@ -1951,6 +1975,62 @@ table.compare tbody tr:last-child td {
     padding: 30px 28px;
     margin: 28px
   }
+  /* 04 選ばれる3つの理由：タブレットもPCと同じ2カラム */
+  .sec-reasons .reason-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  /* REASON 02はPCと同じく画像を左、文章を右 */
+  .sec-reasons .reason-block.rev .r-text {
+    order: 2;
+  }
+  .sec-reasons .reason-block.rev .r-visual {
+    order: 1;
+  }
+  /* 07 管理者/スタッフ：タブレットはテキスト左・画像右 */
+  .pair-card {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    column-gap: 24px;
+    align-items: start;
+  }
+  .pair-card > *:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .pair-card > *:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .pair-card > *:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+  .pair-card > *:nth-child(4) {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: center;
+  }
+  .staff-visual-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .staff-visual-row .pair-visual {
+    flex: 1 1 auto;
+  }
+  .staff-visual-row .line-note {
+    flex: 0 0 140px;
+  }
+  .pair-grid .pair-card:nth-child(2) .staff-visual-row .pair-visual {
+    flex: 0 0 auto;
+  }
+  .pair-grid .pair-card:nth-child(2) .staff-visual-row .pair-visual img {
+    width: auto;
+    height: 229px;
+    object-fit: contain;
+  }
 }
 @media(max-width:680px) {
   .wrap {
@@ -1965,7 +2045,7 @@ table.compare tbody tr:last-child td {
     flex: none
   }
   .ba-illust img {
-    width: 160px
+    width: clamp(140px, 58.8vw, 400px)
   }
   .pad-l {
     padding-block: clamp(48px, 10vw, 72px)
@@ -1993,20 +2073,33 @@ table.compare tbody tr:last-child td {
   .hero-lead {
     font-size: 14px
   }
+  .hero-cta-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
   .price-chips {
     grid-template-columns: 1fr;
-    gap: 6px
+    gap: 6px;
+    width: 88%;
+    margin: 0 auto
   }
   .p-chip {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 14px;
-    text-align: left;
+    text-align: center;
     padding: 8px
   }
   .p-chip .lbl {
     margin-bottom: 0
+  }
+  .hero-note {
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
   }
   .pain-grid {
     grid-template-columns: 1fr
@@ -2018,6 +2111,9 @@ table.compare tbody tr:last-child td {
     flex-direction: column;
     border-radius: var(--radius-lg);
     padding: 20px
+  }
+  .flow-summary .fs-arrow {
+    display: none
   }
   .flow-summary .fs-text {
     margin-left: 0;
@@ -2040,62 +2136,28 @@ table.compare tbody tr:last-child td {
     display: none
   }
   /* 比較表 → 縦積みカードに切り替え(横スクロール回避) */
-  .compare-table-wrap {
-    overflow-x: visible;
-    border-radius: 0;
-    box-shadow: none;
-    border: none
-  }
   table.compare {
     min-width: 0;
-    display: block
+    white-space: normal;
   }
-  table.compare thead {
-    display: none
+  table.compare thead th {
+    font-size: 10.5px;
+    padding: 8px 6px;
+    line-height: 1.4;
   }
-  table.compare tbody {
-    display: block
+  table.compare thead th.col-as {
+    font-size: 12px;
   }
-  table.compare tr {
-    display: block;
-    margin-bottom: 14px;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-card);
-    overflow: hidden;
+  table.compare tbody td {
+    font-size: 11px;
+    padding: 8px 6px;
+    line-height: 1.5;
   }
-  table.compare td {
-    display: block;
-    border-bottom: none;
-    padding: 0;
-    text-align: left
+  table.compare tbody td.col-item {
+    font-size: 11.5px;
   }
-  table.compare td.col-item {
-    padding: 14px 16px;
-    font-size: 14px;
-    background: var(--bg-soft);
-    border-bottom: 1px solid var(--border);
-  }
-  table.compare td[data-label] {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    font-size: 13px;
-    border-bottom: 1px solid var(--border);
-  }
-  table.compare td[data-label]::before {
-    content: attr(data-label);
-    color: var(--gray);
-    font-weight: 700;
-    font-size: 12.5px
-  }
-  table.compare tr td:last-child {
-    border-bottom: none
-  }
-  table.compare td.col-as {
-    background: var(--orange-light)
+  table.compare td.col-as .mk {
+    font-size: 19px;
   }
   .steps5 {
     grid-template-columns: 1fr
@@ -2162,5 +2224,22 @@ table.compare tbody tr:last-child td {
   }
   h1 {
     word-break: keep-all
+  }
+}
+@media(max-width:560px) {
+  .ba-icon-step {
+    flex: 0 0 100%
+  }
+  .ba-body-icons {
+    gap: 20px
+  }
+  .ba-icon-step img {
+    max-width: 140px
+  }
+  .ba-col.ba-auto .ba-body-icons {
+    gap: 36px
+  }
+  .ba-col.ba-auto .ba-icon-step img, .ba-col.ba-auto .ba-auto-icon {
+    max-width: 128px
   }
 }
