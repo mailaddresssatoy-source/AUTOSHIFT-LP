@@ -19,4 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     targets.forEach((t) => t.classList.add("in-view"));
   }
+
+  // お問い合わせフォーム：送信完了（iframe再読み込み）でページ上部へ戻る
+  const contactFrame = document.querySelector(".contact-form-frame");
+  if (contactFrame) {
+    let loadCount = 0;
+    contactFrame.addEventListener("load", () => {
+      loadCount++;
+      // 1回目は初期表示のロードなので無視し、2回目以降（送信後の遷移）でスクロール
+      if (loadCount > 1) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  }
 });
